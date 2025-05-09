@@ -82,7 +82,7 @@ end
 })
 
 local Button = Tab:CreateButton({
-   Name = "Button Example",
+   Name = "Noclip",
    Callback = function()
       local Players = game:GetService("Players")
 local RunService = game:GetService("RunService")
