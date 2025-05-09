@@ -80,3 +80,28 @@ if _G.infinJumpStarted == nil then
 end
    end,
 })
+
+local Slider = Tab:CreateSlider({
+   Name = "WalkSpeed",
+   Range = {16, 1000},
+   Increment = 1,
+   Suffix = "Speed",
+   CurrentValue = 16,
+   Flag = "Slider1", -- A flag is the identifier for the configuration file, make sure every element has a different flag if you're using configuration saving to ensure no overlaps
+   Callback = function(SValue)
+      local Value = SValue
+
+local player = game.Players.LocalPlayer
+
+-- Czekaj na Character i Humanoid
+if not player.Character or not player.Character:FindFirstChild("Humanoid") then
+    player.CharacterAdded:Wait()
+end
+
+-- Ustaw WalkSpeed
+player.Character:WaitForChild("Humanoid").WalkSpeed = Value
+
+   -- The function that takes place when the slider changes
+   -- The variable (Value) is a number which correlates to the value the slider is currently at
+   end,
+})
