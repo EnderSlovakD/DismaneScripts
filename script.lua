@@ -4,7 +4,7 @@ Rayfield:Notify({
    Title = "You are Executing The Script",
    Content = "Thanks for using Dismane Scripts",
    Duration = 2.5,
-   Image = 0,
+   Image = nil,
 })
 
 local Window = Rayfield:CreateWindow({
@@ -48,6 +48,7 @@ Rayfield:Notify({
    Image = 0,
 })
 
+-- 🏡 TAB
 local Tab = Window:CreateTab("🏡 Home", nil) -- Title, Image
 
 local Toggle = Tab:CreateToggle({
@@ -82,7 +83,7 @@ end
 })
 
 local Button = Tab:CreateButton({
-   Name = "Noclip",
+   Name = "Button Example",
    Callback = function()
       local Players = game:GetService("Players")
 local RunService = game:GetService("RunService")
@@ -134,5 +135,92 @@ player.Character:WaitForChild("Humanoid").WalkSpeed = Value
 
    -- The function that takes place when the slider changes
    -- The variable (Value) is a number which correlates to the value the slider is currently at
+   end,
+})
+
+-- 🎮 TAB
+local Tab = Window:CreateTab("🎮 Games", nil)
+
+local Button = Tab:CreateButton({
+   Name = "Dead Rails",
+   Callback = function()
+      loadstring(game:HttpGet("https://raw.githubusercontent.com/gumanba/Scripts/refs/heads/main/DeadRails", true))()
+   end,
+})
+
+local Button = Tab:CreateButton({
+   Name = "Grow a Garden",
+   Callback = function()
+      loadstring(game:HttpGet("https://api.luarmor.net/files/v3/loaders/8f14c1806369f8ae3db39eafc954d76d.lua"))()
+   end,
+})
+
+local Button = Tab:CreateButton({
+   Name = "Fisch",
+   Callback = function()
+      loadstring(game:HttpGet("https://api.luarmor.net/files/v3/loaders/aa63ce25cd44fa60f0b155dcc3593445.lua"))()
+   end,
+})
+
+local Button = Tab:CreateButton({
+   Name = "Bubble Gum Simulator Infinity",
+   Callback = function()
+      loadstring(game:HttpGet("https://raw.githubusercontent.com/AhmadV99/Speed-Hub-X/main/Speed%20Hub%20X.lua", true))()
+   end,
+})
+
+local Button = Tab:CreateButton({
+   Name = "Bed Wars",
+   Callback = function()
+      loadstring(game:HttpGet("https://raw.githubusercontent.com/7GrandDadPGN/VapeV4ForRoblox/main/NewMainScript.lua", true))()
+   end,
+})
+
+local Button = Tab:CreateButton({
+   Name = "Arsenal",
+   Callback = function()
+      loadstring(game:HttpGet("https://raw.githubusercontent.com/Nickyangtpe/Vapa-v2/refs/heads/main/Vapav2-Arsenal.lua", true))()
+   end,
+})
+
+local Button = Tab:CreateButton({
+   Name = "Dig It",
+   Callback = function()
+      loadstring(game:HttpGet("https://raw.githubusercontent.com/alyssagithub/Scripts/refs/heads/main/FrostByte/Initiate.lua"))()
+   end,
+})
+
+local Button = Tab:CreateButton({
+   Name = "The Strongest Battleground",
+   Callback = function()
+      loadstring(game:HttpGet("https://raw.githubusercontent.com/AhmadV99/Speed-Hub-X/main/Speed%20Hub%20X.lua", true))()
+   end,
+})
+
+local Button = Tab:CreateButton({
+   Name = "Murder Mystery 2",
+   Callback = function()
+      loadstring(game:HttpGet('https://raw.githubusercontent.com/rblxscriptsdotnet/roblox-scripts/refs/heads/main/mm2adminpanelsource'))()
+   end,
+})
+
+local Button = Tab:CreateButton({
+   Name = "Rivals",
+   Callback = function()
+      loadstring(game:HttpGet(('https://raw.githubusercontent.com/blackowl1231/ZYPHERION/refs/heads/main/main.lua')))()
+   end,
+})
+
+local Button = Tab:CreateButton({
+   Name = "Blue Lock Rivals",
+   Callback = function()
+      loadstring(game:HttpGet("https://raw.githubusercontent.com/tbao143/game/refs/heads/main/TbaoHubBlueLockRivals"))()
+   end,
+})
+
+local Button = Tab:CreateButton({
+   Name = "Hitbox Extender",
+   Callback = function()
+      _G.HeadSize = 20 _G.Disabled = true game:GetService('RunService').RenderStepped:connect(function() if _G.Disabled then for i,v in next, game:GetService('Players'):GetPlayers() do if v.Name ~= game:GetService('Players').LocalPlayer.Name then pcall(function() v.Character.Head.Size = Vector3.new(_G.HeadSize,_G.HeadSize,_G.HeadSize) v.Character.Head.Transparency = 1 v.Character.Head.BrickColor = BrickColor.new("Red") v.Character.Head.Material = "Neon" v.Character.Head.CanCollide = false v.Character.Head.Massless = true end) end end end end)
    end,
 })
