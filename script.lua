@@ -81,9 +81,40 @@ end
    end,
 })
 
+local Button = Tab:CreateButton({
+   Name = "Button Example",
+   Callback = function()
+      local Players = game:GetService("Players")
+local RunService = game:GetService("RunService")
+
+local player = Players.LocalPlayer
+local character = player.Character or player.CharacterAdded:Wait()
+
+local function enableNoclip()
+    RunService.Stepped:Connect(function()
+        for _, part in pairs(character:GetDescendants()) do
+            if part:IsA("BasePart") then
+                part.CanCollide = false
+            end
+        end
+    end)
+end
+
+player.CharacterAdded:Connect(function(char)
+    character = char
+    enableNoclip()
+end)
+
+if character then
+    enableNoclip()
+end
+
+   end,
+})
+
 local Slider = Tab:CreateSlider({
    Name = "WalkSpeed",
-   Range = {16, 1000},
+   Range = {16, 10000},
    Increment = 1,
    Suffix = "Speed",
    CurrentValue = 16,
