@@ -242,15 +242,15 @@ local Button = Tab:CreateButton({
 })
 
 local Button = Tab:CreateButton({
-   Name = "Blue Lock Rivals",
+   Name = "Rivals (Mobile)",
    Callback = function()
-      loadstring(game:HttpGet("https://raw.githubusercontent.com/tbao143/game/refs/heads/main/TbaoHubBlueLockRivals"))()
+      loadstring(game:HttpGet("https://api.luarmor.net/files/v3/loaders/c8c09494b048a1fc6a4dc43bec1f3713.lua"))()
    end,
 })
 
 local Button = Tab:CreateButton({
-   Name = "Rivals (Mobile)",
+   Name = "Blue Lock Rivals",
    Callback = function()
-      loadstring(game:HttpGet("https://api.luarmor.net/files/v3/loaders/c8c09494b048a1fc6a4dc43bec1f3713.lua"))()
+      loadstring(game:HttpGet("https://raw.githubusercontent.com/tbao143/game/refs/heads/main/TbaoHubBlueLockRivals"))()
    end,
 })
