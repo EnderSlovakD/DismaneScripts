@@ -1,3 +1,15 @@
+print("Dead Rails")
+print("Grow a Garden")
+print("Buble Gum Simulator Infinity")
+print("Bed Wars")
+print("Arsenal")
+print("Dig It")
+print("The Strongest Battle Ground")
+print("Murder Mystery 2")
+print("Rivals")
+print("Blue Lock Rivals")
+print("And Execute Your Own Script")
+
 local Rayfield = loadstring(game:HttpGet('https://sirius.menu/rayfield'))()
 
 Rayfield:Notify({
@@ -216,7 +228,7 @@ local Button = Tab:CreateButton({
 })
 
 local Button = Tab:CreateButton({
-   Name = "Rivals",
+   Name = "Rivals (PC)",
    Callback = function()
       loadstring(game:HttpGet(('https://raw.githubusercontent.com/blackowl1231/ZYPHERION/refs/heads/main/main.lua')))()
    end,
@@ -226,5 +238,12 @@ local Button = Tab:CreateButton({
    Name = "Blue Lock Rivals",
    Callback = function()
       loadstring(game:HttpGet("https://raw.githubusercontent.com/tbao143/game/refs/heads/main/TbaoHubBlueLockRivals"))()
+   end,
+})
+
+local Button = Tab:CreateButton({
+   Name = "Rivals (Mobile)",
+   Callback = function()
+      loadstring(game:HttpGet("https://api.luarmor.net/files/v3/loaders/c8c09494b048a1fc6a4dc43bec1f3713.lua"))()
    end,
 })
