@@ -61,9 +61,6 @@ local Toggle = Tab:CreateToggle({
 if _G.infinJumpStarted == nil then
 	--Ensures this only runs once to save resources
 	_G.infinJumpStarted = true
-	
-	--Notifies readiness
-	game.StarterGui:SetCore("SendNotification", {Title="Youtube Hub"; Text="Infinite Jump Activated!"; Duration=5;})
 
 	--The actual infinite jump
 	local plr = game:GetService('Players').LocalPlayer
@@ -115,7 +112,7 @@ end
 
 local Slider = Tab:CreateSlider({
    Name = "WalkSpeed",
-   Range = {16, 10000},
+   Range = {16, 1000},
    Increment = 1,
    Suffix = "Speed",
    CurrentValue = 16,
@@ -152,13 +149,6 @@ local Button = Tab:CreateButton({
    Name = "Grow a Garden",
    Callback = function()
       loadstring(game:HttpGet("https://api.luarmor.net/files/v3/loaders/8f14c1806369f8ae3db39eafc954d76d.lua"))()
-   end,
-})
-
-local Button = Tab:CreateButton({
-   Name = "Fisch",
-   Callback = function()
-      loadstring(game:HttpGet("https://api.luarmor.net/files/v3/loaders/aa63ce25cd44fa60f0b155dcc3593445.lua"))()
    end,
 })
 
