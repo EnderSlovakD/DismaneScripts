@@ -135,6 +135,27 @@ player.Character:WaitForChild("Humanoid").WalkSpeed = Value
    end,
 })
 
+Tab:CreateInput({
+    Name = "Executor",
+    PlaceholderText = "Insert",
+    RemoveTextAfterFocusLost = false,
+    Callback = function(Text)
+        userCode = Text
+    end,
+})
+
+Tab:CreateButton({
+    Name = "Execute",
+    Callback = function()
+        local success, err = pcall(function()
+            loadstring(userCode)()
+        end)
+        if not success then
+            warn("Chyba pri spustení kódu: " .. tostring(err))
+        end
+    end
+})
+
 -- 🎮 TAB
 local Tab = Window:CreateTab("🎮 Games", nil)
 
