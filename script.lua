@@ -83,7 +83,7 @@ end
 })
 
 local Button = Tab:CreateButton({
-   Name = "Button Example",
+   Name = "Noclip",
    Callback = function()
       local Players = game:GetService("Players")
 local RunService = game:GetService("RunService")
@@ -215,12 +215,5 @@ local Button = Tab:CreateButton({
    Name = "Blue Lock Rivals",
    Callback = function()
       loadstring(game:HttpGet("https://raw.githubusercontent.com/tbao143/game/refs/heads/main/TbaoHubBlueLockRivals"))()
-   end,
-})
-
-local Button = Tab:CreateButton({
-   Name = "Hitbox Extender",
-   Callback = function()
-      _G.HeadSize = 20 _G.Disabled = true game:GetService('RunService').RenderStepped:connect(function() if _G.Disabled then for i,v in next, game:GetService('Players'):GetPlayers() do if v.Name ~= game:GetService('Players').LocalPlayer.Name then pcall(function() v.Character.Head.Size = Vector3.new(_G.HeadSize,_G.HeadSize,_G.HeadSize) v.Character.Head.Transparency = 1 v.Character.Head.BrickColor = BrickColor.new("Red") v.Character.Head.Material = "Neon" v.Character.Head.CanCollide = false v.Character.Head.Massless = true end) end end end end)
    end,
 })
