@@ -168,6 +168,13 @@ Tab:CreateButton({
     end
 })
 
+local Button = Tab:CreateButton({
+   Name = "Un-Execute Dismane Scripts",
+   Callback = function()
+      Rayfield:Destroy()
+   end,
+})
+
 -- 🎮 TAB
 local Tab = Window:CreateTab("🎮 Games", nil)
 
